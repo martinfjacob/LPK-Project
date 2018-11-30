@@ -2,7 +2,7 @@ library(dplyr)
 library(tidyr)
 
 
-veg_data <- read.csv("data/platt_veg_data_updated.csv") 
+veg_data <- read.csv("data/platt_veg_data_updated.csv", sep = "\t") 
 
 veg_data_by_plot <- select(veg_data, "BLOCK", "PLOT", "SPCODE", "FREQUENCY")
 
