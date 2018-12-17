@@ -37,10 +37,13 @@ ggplot(fire_interval, aes(x = Block, y = FRI)) +
 
 # Graph of fire intervals for each block 
 ggplot() +
-  geom_histogram(data = fire_by_year, aes(x = interval_years, fill = Block))
+  geom_histogram(data = fire_by_year, aes(x = interval_years, fill = Block), bins = 20)
 
 ggplot(fire_by_year, aes(x = Block, y = interval_years)) +
   geom_line() +
   labs(x = "Burn Unit", y = "Fire Return Interval")
 
+ggplot(fire_by_year, aes(x = Block, y = interval_years)) +
+  geom_boxplot() +
+  labs(x = "Burn Unit", y = "Fire Return Interval")
            
